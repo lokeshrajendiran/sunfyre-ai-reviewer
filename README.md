@@ -76,22 +76,22 @@ cp client/.env.example client/.env
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/sunfyre
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-GITHUB_CALLBACK_URL=http://localhost:5000/api/auth/github/callback
-SESSION_SECRET=your_session_secret
-JWT_SECRET=your_jwt_secret
+MONGODB_URI=<your_mongodb_connection_string>
+GITHUB_CLIENT_ID=<your_github_client_id>
+GITHUB_CLIENT_SECRET=<your_github_client_secret>
+GITHUB_CALLBACK_URL=<your_server_url>/api/auth/github/callback
+SESSION_SECRET=<your_session_secret>
+JWT_SECRET=<your_jwt_secret>
 JWT_EXPIRES_IN=7d
-GEMINI_API_KEY=your_gemini_api_key
+GEMINI_API_KEY=<your_gemini_api_key>
 GEMINI_MODEL=gemini-2.5-flash
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=<your_client_url>
 ```
 
 **Client `.env`**
 ```env
-VITE_API_URL=http://localhost:5000/api
-VITE_GITHUB_CLIENT_ID=your_github_client_id
+VITE_API_URL=<your_server_url>/api
+VITE_GITHUB_CLIENT_ID=<your_github_client_id>
 ```
 
 ### 3. Start the backend
@@ -196,7 +196,4 @@ Frontend runs on `http://localhost:5173`.
 - [ ] Unit and integration tests (Jest + Supertest, React Testing Library)
 - [ ] Production deployment (Docker + CI/CD)
 
-## License
-
-ISC
 
